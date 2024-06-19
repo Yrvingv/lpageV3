@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            background-image: url("/static/Fo6.png");
+            background-size: cover;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            padding: 30px;
+        }
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+        .video {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 20px 40px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        .form-container {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+            max-width: 100%;
+        }
+        .form-container label, .form-container input {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 20px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"] {
+            height: 40px;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        h1, p {
+            font-size: 30px;
+        }
+        .video video {
+            max-width: 80%;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            .button {
+                padding: 20px 60px;
+                font-size: 30px;
+            }
+            .form-container label, .form-container input {
+                font-size: 30px;
+            }
+            .form-container input[type="text"],
+            .form-container input[type="email"] {
+                height: 50px;
+                padding: 15px;
+                font-size: 24px;
+            }
+            .form-container input[type="submit"] {
+                padding: 15px 30px;
+                font-size: 30px;
+            }
+            h1, p {
+                font-size: 40px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .button {
+                padding: 60px 120px;
+                font-size: 60px;
+            }
+            .form-container label, .form-container input {
+                font-size: 50px;
+            }
+            .form-container input[type="text"],
+            .form-container input[type="email"] {
+                height: 100px;
+                padding: 30px;
+                font-size: 40px;
+            }
+            .form-container input[type="submit"] {
+                padding: 20px 100px;
+                font-size: 50px;
+            }
+            h1, p {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/static/logo.png" alt="logo">
+        </div>
+        <h1>por YRVING VIERA</h1>
+        <p>¿De qué se trata el servicio de coaching online</p>
+        <p>para mejorar la productividad?</p>
+        <div class="video">
+            <video controls>
+                <source src="/static/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="form-container">
+            <form action="https://formspree.io/f/mzbnwnga" method="POST">
+                <p>Quiero más info...</p>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <p>HAZ UNA CITA CONMIGO PARA MOSTRARTE</p>
+        <p>EL SERVICIO</p>
+        <a href="{{ url_for('calendar') }}" class="button">Reservar Cita</a>
+        
+    </div>
+</body>
+</html>
